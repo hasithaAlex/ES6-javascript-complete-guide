@@ -1,21 +1,29 @@
-import {Car} from './car';
-import {Truck} from './truck';
 
-let car = new Car({
-	price: 30000, make: 'Chevy', model: 'Malibu',
-	year: 2014, isElectric: false, isHatchback: false
+var colors = ['red', 'blue'];
+
+//normal way
+for (var index = 0; index < colors.length; index++) {
+	var element = colors[index];
+	console.log(element);
+}			 
+
+
+
+//array helpers
+//KEY WORDS ==>> iterater function
+//PROS ==>> less code
+colors.forEach(function(color) {
+	console.log(color);
 });
 
-let truck = new Truck({
-	price: 40000, make: 'Ford', model: 'F150',
-	year: 2014, is4by4: true
-});
+//array helpers with calling function
+colors.forEach(function(color) {
+	console.log(color);
+},hasitha());
+
+function hasitha() {
+	console.log("hasitha");
+}
 
 var output = document.getElementById('output');
-output.innerHTML += `
-	<br/>${car.getDetails() }
-    <br/>Car total: ${car.getTotal(.08) }
-	<br/><br />
-	${truck.getDetails() }
-	<br/>Truck total: ${truck.getTotal(.08) }
-	`;
+output.innerHTML += `testing`;

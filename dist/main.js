@@ -1,27 +1,41 @@
 'use strict';
 
-System.register(['./car', './truck'], function (_export, _context) {
+System.register([], function (_export, _context) {
 	"use strict";
 
-	var Car, Truck, car, truck, output;
-	return {
-		setters: [function (_car) {
-			Car = _car.Car;
-		}, function (_truck) {
-			Truck = _truck.Truck;
-		}],
-		execute: function () {
-			car = new Car({
-				price: 30000, make: 'Chevy', model: 'Malibu',
-				year: 2014, isElectric: false, isHatchback: false
-			});
-			truck = new Truck({
-				price: 40000, make: 'Ford', model: 'F150',
-				year: 2014, is4by4: true
-			});
-			output = document.getElementById('output');
+	var colors, index, element, output;
 
-			output.innerHTML += '\n\t<br/>' + car.getDetails() + '\n    <br/>Car total: ' + car.getTotal(.08) + '\n\t<br/><br />\n\t' + truck.getDetails() + '\n\t<br/>Truck total: ' + truck.getTotal(.08) + '\n\t';
+
+	function hasitha() {
+		console.log("hasitha");
+	}
+
+	return {
+		setters: [],
+		execute: function () {
+			colors = ['red', 'blue'];
+
+
+			//normal way
+			for (index = 0; index < colors.length; index++) {
+				element = colors[index];
+
+				console.log(element);
+			}
+
+			//array helpers
+			//KEY WORDS ==>> iterater function
+			//PROS ==>> less code
+			colors.forEach(function (color) {
+				console.log(color);
+			});
+
+			//array helpers with calling function
+			colors.forEach(function (color) {
+				console.log(color);
+			}, hasitha());output = document.getElementById('output');
+
+			output.innerHTML += 'testing';
 		}
 	};
 });
