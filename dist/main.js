@@ -3,7 +3,7 @@
 System.register([], function (_export, _context) {
 	"use strict";
 
-	var colors, index, element, numbers, sum, sum, output;
+	var colors, index, element, numbers, sum, sum, numbers, DoubleNumbers, output;
 
 
 	function hasitha() {
@@ -52,6 +52,18 @@ System.register([], function (_export, _context) {
 
 			numbers.forEach(adder);
 			console.log(sum);
+
+			console.log("video_07==(MAP)==================================================");
+
+			numbers = [1, 2, 3];
+			DoubleNumbers = numbers.map(function (number) {
+				return number * 2;
+			});
+
+			console.log(numbers);
+			console.log(DoubleNumbers);
+
+			console.log("video_08==(MAP more COMPLEX)=====================================");
 
 			output = document.getElementById('output');
 
