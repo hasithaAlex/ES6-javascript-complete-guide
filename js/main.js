@@ -10,3 +10,14 @@ console.log(DoubleNumbers);
 
 console.log("video_08==(MAP more COMPLEX)=====================================");
 
+var cars = [
+	{model:'Toyota',price:100000},
+	{model:'Yamaha',price:210000},
+	{model:'Lambogini',price:30000000}
+];
+
+var prices = cars.map(function (car) {
+	return car.price;
+})
+
+console.log(prices);

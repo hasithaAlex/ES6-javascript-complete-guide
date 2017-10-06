@@ -3,7 +3,7 @@
 System.register([], function (_export, _context) {
 	"use strict";
 
-	var numbers, DoubleNumbers;
+	var numbers, DoubleNumbers, cars, prices;
 	return {
 		setters: [],
 		execute: function () {
@@ -18,6 +18,14 @@ System.register([], function (_export, _context) {
 			console.log(DoubleNumbers);
 
 			console.log("video_08==(MAP more COMPLEX)=====================================");
+
+			cars = [{ model: 'Toyota', price: 100000 }, { model: 'Yamaha', price: 210000 }, { model: 'Lambogini', price: 30000000 }];
+			prices = cars.map(function (car) {
+				return car.price;
+			});
+
+
+			console.log(prices);
 		}
 	};
 });
