@@ -1,61 +1,31 @@
-'use strict';
+"use strict";
 
 System.register([], function (_export, _context) {
 	"use strict";
 
-	var colors, index, element, numbers, sum, sum, output;
-
-
-	function hasitha() {
-		console.log("hasitha");
-	}
-
-	//using a function inside forEach
-	function adder(element) {
-		sum += element;
-	}
+	var numbers, DoubleNumbers, cars, prices;
 	return {
 		setters: [],
 		execute: function () {
-			console.log("video_04========================================================");
-			colors = ['red', 'blue'];
+			console.log("video_07==(MAP)==================================================");
 
-
-			//=====================================================================
-			//normal way
-			for (index = 0; index < colors.length; index++) {
-				element = colors[index];
-
-				console.log(element);
-			}
-
-			//=====================================================================
-			//array helpers
-			//KEY WORDS ==>> iterater function
-			//PROS ==>> less code
-			colors.forEach(function (color) {
-				console.log(color);
+			numbers = [1, 2, 3];
+			DoubleNumbers = numbers.map(function (number) {
+				return number * 2;
 			});
 
-			//array helpers and after for each calling another function
-			colors.forEach(function (color) {
-				console.log(color);
-			}, hasitha());console.log("video_05========================================================");
+			console.log(numbers);
+			console.log(DoubleNumbers);
 
-			numbers = [1, 2, 3, 4];
-			sum = 0;
+			console.log("video_08==(MAP more COMPLEX)=====================================");
 
-			numbers.forEach(function (element) {
-				sum += element;
+			cars = [{ model: 'Toyota', price: 100000 }, { model: 'Yamaha', price: 210000 }, { model: 'Lambogini', price: 30000000 }];
+			prices = cars.map(function (car) {
+				return car.price;
 			});
-			console.log(sum);sum = 0;
 
-			numbers.forEach(adder);
-			console.log(sum);
 
-			output = document.getElementById('output');
-
-			output.innerHTML += 'Application';
+			console.log(prices);
 		}
 	};
 });

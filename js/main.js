@@ -1,53 +1,24 @@
-console.log("video_04========================================================");
-var colors = ['red', 'blue'];
 
-//=====================================================================
-//normal way
-for (var index = 0; index < colors.length; index++) {
-	var element = colors[index];
-	console.log(element);
-}			 
+//map used to render list of data
+console.log("07==(MAP)==================================================");
 
-
-//=====================================================================
-//array helpers
-//KEY WORDS ==>> iterater function
-//PROS ==>> less code
-colors.forEach(function(color) {
-	console.log(color);
+var numbers = [1,2,3];
+var DoubleNumbers = numbers.map(function (number) {
+	return (number*2)
 });
+console.log(numbers);
+console.log(DoubleNumbers);
 
-//array helpers and after for each calling another function
-colors.forEach(function(color) {
-	console.log(color);
-},hasitha());
+console.log("08==(MAP more COMPLEX)=====================================");
 
-function hasitha() {
-	console.log("hasitha");
-}
+var cars = [
+	{model:'Toyota',price:100000},
+	{model:'Yamaha',price:210000},
+	{model:'Lambogini',price:30000000}
+];
 
+var prices = cars.map(function (car) {
+	return car.price;
+})
 
-console.log("video_05========================================================");
-
-var numbers = [1, 2, 3, 4];
-
-
-
-
-var sum = 0; 
-numbers.forEach(function(element) {
-	sum += element;
-});	
-console.log(sum);
-
-
-//using a function inside forEach
-function adder(element) {
-	sum += element;
-}
-var sum = 0;
-numbers.forEach(adder);	
-console.log(sum);
-
-var output = document.getElementById('output');
-output.innerHTML += `Application`;
+console.log(prices);
