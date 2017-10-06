@@ -1,21 +1,24 @@
-import {Car} from './car';
-import {Truck} from './truck';
 
-let car = new Car({
-	price: 30000, make: 'Chevy', model: 'Malibu',
-	year: 2014, isElectric: false, isHatchback: false
+//map used to render list of data
+console.log("07==(MAP)==================================================");
+
+var numbers = [1,2,3];
+var DoubleNumbers = numbers.map(function (number) {
+	return (number*2)
 });
+console.log(numbers);
+console.log(DoubleNumbers);
 
-let truck = new Truck({
-	price: 40000, make: 'Ford', model: 'F150',
-	year: 2014, is4by4: true
-});
+console.log("08==(MAP more COMPLEX)=====================================");
 
-var output = document.getElementById('output');
-output.innerHTML += `
-	<br/>${car.getDetails() }
-    <br/>Car total: ${car.getTotal(.08) }
-	<br/><br />
-	${truck.getDetails() }
-	<br/>Truck total: ${truck.getTotal(.08) }
-	`;
+var cars = [
+	{model:'Toyota',price:100000},
+	{model:'Yamaha',price:210000},
+	{model:'Lambogini',price:30000000}
+];
+
+var prices = cars.map(function (car) {
+	return car.price;
+})
+
+console.log(prices);
